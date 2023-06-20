@@ -1,4 +1,5 @@
 from setuptools import setup
+from cx_Freeze import setup, Executable
 
 setup(name='chatexampy', #name задает полное имя пакета.
       version = "0.1",
@@ -6,5 +7,7 @@ setup(name='chatexampy', #name задает полное имя пакета.
       author = "Liuba Kundas",
       author_email = "kundasl1@gmail.com",
       #url = "http://www.blog.pythonlibrary.org",
-      packages=["src"]
+      packages=["src"],
+      executables = [Executable("src")] #правильно
       )
+input("Press Enter")
